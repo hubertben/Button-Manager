@@ -9,12 +9,13 @@ in your html file.
 
 ## How to Create a new Button?
 Below are the defined parameters to the class 'Button'
-`button = new Button(t, bg, tc, cc);`
+`button = new Button(t, bg, tc, cc, f);`
 
  - t - text that will show up inside of the button.
  - bg - background color of the button at rest.
  - tc - text color.
- - cc - color of the button when being clicked
+ - cc - color of the button when being clicked.
+ - f - f is the function that will be run when the button is clicked.
 
 ## How to Create a new Button Manager?
 
