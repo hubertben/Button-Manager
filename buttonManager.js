@@ -1,3 +1,21 @@
+let canvas = document.getElementById('canvas'); //  Change to ID of your canvas
+let ctx = canvas.getContext("2d");
+
+let width = canvas.width;
+let height = canvas.height;
+
+CanvasRenderingContext2D.prototype.roundRect = function (x, y, width, height, radius) {
+    if (width < 2 * radius) radius = width / 2;
+    if (height < 2 * radius) radius = height / 2;
+    this.beginPath();
+    this.moveTo(x + radius, y);
+    this.arcTo(x + width, y, x + width, y + height, radius);
+    this.arcTo(x + width, y + height, x, y + height, radius);
+    this.arcTo(x, y + height, x, y, radius);
+    this.arcTo(x, y, x + width, y, radius);
+    this.closePath();
+    return this;
+}
 
 class ButtonManager{
 
@@ -148,3 +166,19 @@ class Button {
         return false;
     }
 }
+
+
+/*
+
+Include this function in your main script to update the button sizes dynamically (as long as the w, h values are under 1).
+This works if your canvas has a width and height that adjust based on the size of the window.
+
+window.addEventListener('resize', windowResize);
+function windowResize() {
+    width = canvas.width;
+    height = canvas.height;
+
+    THE_NAME_OF_YOUR_BUTTONMANAGER.updateWindowDimentions(width, height);
+};
+
+*/
