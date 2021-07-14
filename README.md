@@ -18,7 +18,7 @@ Below are the defined parameters to the class 'Button'
 
 ## How to Create a new Button Manager?
 
-Below are the defined parameters to the class 'ButtonManager'
+Below are the defined parameters for a 'ButtonManager'
 `header = new ButtonManager(L, x, y, w, h, r, b, j);`
 
  - L - a list of buttons created. Make sure to add the buttons you want in the same manager to a single list. 
