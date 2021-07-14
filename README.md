@@ -15,7 +15,7 @@ Below are the defined parameters to the class 'Button'
  - bg - background color of the button at rest.
  - tc - text color.
  - cc - color of the button when being clicked.
- - f - f is the function that will be run when the button is clicked.
+ - f - the function that will be run when the button is clicked.
 
 ## How to Create a new Button Manager?
 
